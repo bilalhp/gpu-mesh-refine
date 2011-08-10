@@ -1,0 +1,112 @@
+./mesh_refine -f input.txt #-o output.txt
+# of threads=512 infile=input.txt outfile=(null)
+Reading input file... 14 points, 28 edges, 15 triangles, DONE!
+Validating input... 1 triangles to refine DONE!
+Starting process...
+Total allocated memory = 1276 + 360 bytes [0.0 MB]
+[malloc_copy_input_to_device] TRIS MEMCPY TIME ELAPSED = 165 usecs [7.733333 MB/s]
+[malloc_copy_input_to_device] EDGES MEMCPY TIME ELAPSED = 185 usecs [6.897297 MB/s]
+[calc_edge_lengths_mid_p] WORK STARTED: #threads=512 #blocks=1***
+[calc_edge_lengths_mid_p] TIME ELAPSED = 351 usecs
+[mark_longest_edges] WORK STARTED: #threads=512 #blocks=1***
+[mark_longest_edges] TIME ELAPSED = 317 usecs
+[establish_links] WORK STARTED: #threads=512 #blocks=1***
+[establish_links] TIME ELAPSED = 347 usecs
+[follow_links] WORK STARTED: #threads=512 #blocks=1***
+[follow_links] TIME ELAPSED = 329 usecs
+[get_counters] WORK STARTED: #threads=512 #blocks=1***
+[get_counters] TIME ELAPSED = 319 usecs
+[prefix_counters] WORK STARTED: #threads=512 #blocks=1***
+[prefix_counters] TIME ELAPSED = 140 usecs
+new_edge_count=12 new_tri_count=8
+[copy_back_edges] MEMCPY TIME ELAPSED = 257 usecs
+[copy_back_tris] MEMCPY TIME ELAPSED = 236 usecs
+Total allocated memory = 1804 + 552 bytes [0.0 MB]
+[malloc_copy_input_to_device] TRIS MEMCPY TIME ELAPSED = 180 usecs [10.022222 MB/s]
+[malloc_copy_input_to_device] EDGES MEMCPY TIME ELAPSED = 191 usecs [9.445026 MB/s]
+[refine] WORK STARTED: #threads=512 #blocks=1***
+[refine] PASS1 TIME ELAPSED = 346 usecs
+[refine] PASS2 TIME ELAPSED = 456 usecs
+[refine] PASS3 TIME ELAPSED = 601 usecs
+[copy_back_edges] MEMCPY TIME ELAPSED = 274 usecs
+[copy_back_tris] MEMCPY TIME ELAPSED = 195 usecs
+Points:
+point[0]= 0.000000 0.000000
+point[1]= 25.000000 0.000000
+point[2]= 44.000000 0.000000
+point[3]= 14.000000 9.000000
+point[4]= 44.000000 12.000000
+point[5]= 0.000000 18.000000
+point[6]= 15.000000 26.000000
+point[7]= 33.000000 27.000000
+point[8]= 44.000000 28.000000
+point[9]= 0.000000 31.000000
+point[10]= 0.000000 43.000000
+point[11]= 12.000000 43.000000
+point[12]= 31.000000 43.000000
+point[13]= 44.000000 43.000000
+Edges:
+edge[1]=[44.000000,0.000000]    [25.000000,0.000000]    mid=[34.500000,0.000000]        len=19.000000   mark=0  next=0  new_edges={0, 0, orth=0}
+edge[2]=[0.000000,0.000000]     [14.000000,9.000000]    mid=[7.000000,4.500000] len=16.643316   mark=0  next=0  new_edges={0, 0, orth=0}
+edge[3]=[14.000000,9.000000]    [25.000000,0.000000]    mid=[19.500000,4.500000]        len=14.212671   mark=0  next=0  new_edges={0, 0, orth=0}
+edge[4]=[25.000000,0.000000]    [44.000000,12.000000]   mid=[34.500000,6.000000]        len=22.472206   mark=1  next=5  new_edges={0, 0, orth=0}
+edge[5]=[25.000000,0.000000]    [29.000000,10.500000]   mid=[29.000000,10.500000]       len=30.149626   mark=3  next=-1 new_edges={30, 29, orth=33}
+edge[6]=[0.000000,0.000000]     [0.000000,18.000000]    mid=[0.000000,9.000000] len=18.000000   mark=1  next=0  new_edges={0, 0, orth=0}
+edge[7]=[0.000000,18.000000]    [14.000000,9.000000]    mid=[7.000000,13.500000]        len=16.643316   mark=0  next=0  new_edges={0, 0, orth=0}
+edge[8]=[0.000000,18.000000]    [14.500000,17.500000]   mid=[14.500000,17.500000]       len=17.029387   mark=3  next=-1 new_edges={37, 36, orth=38}
+edge[9]=[29.000000,10.500000]   [23.500000,18.000000]   mid=[23.500000,18.000000]       len=26.172506   mark=3  next=-1 new_edges={32, 31, orth=39}
+edge[10]=[33.000000,27.000000]  [44.000000,12.000000]   mid=[38.500000,19.500000]       len=18.601076   mark=1  next=5  new_edges={0, 0, orth=0}
+edge[11]=[44.000000,28.000000]  [44.000000,12.000000]   mid=[44.000000,20.000000]       len=16.000000   mark=0  next=0  new_edges={0, 0, orth=0}
+edge[12]=[33.000000,27.000000]  [44.000000,28.000000]   mid=[38.500000,27.500000]       len=11.045362   mark=0  next=0  new_edges={0, 0, orth=0}
+edge[13]=[15.000000,26.000000]  [33.000000,27.000000]   mid=[24.000000,26.500000]       len=18.027756   mark=0  next=0  new_edges={0, 0, orth=0}
+edge[14]=[14.500000,17.500000]  [7.500000,22.000000]    mid=[7.500000,22.000000]        len=-17.000000  mark=3  next=-1 new_edges={35, 34, orth=40}
+edge[15]=[0.000000,18.000000]   [0.000000,31.000000]    mid=[0.000000,24.500000]        len=13.000000   mark=0  next=0  new_edges={0, 0, orth=0}
+edge[16]=[0.000000,31.000000]   [15.000000,26.000000]   mid=[7.500000,28.500000]        len=15.811389   mark=0  next=0  new_edges={0, 0, orth=0}
+edge[17]=[12.000000,43.000000]  [15.000000,26.000000]   mid=[13.500000,34.500000]       len=17.262676   mark=1  next=18 new_edges={0, 0, orth=0}
+edge[18]=[31.000000,43.000000]  [15.000000,26.000000]   mid=[23.000000,34.500000]       len=23.345236   mark=1  next=0  new_edges={0, 0, orth=0}
+edge[19]=[31.000000,43.000000]  [33.000000,27.000000]   mid=[32.000000,35.000000]       len=16.124516   mark=0  next=0  new_edges={0, 0, orth=0}
+edge[20]=[31.000000,43.000000]  [44.000000,28.000000]   mid=[37.500000,35.500000]       len=19.849436   mark=1  next=0  new_edges={0, 0, orth=0}
+edge[21]=[44.000000,43.000000]  [44.000000,28.000000]   mid=[44.000000,35.500000]       len=15.000001   mark=0  next=0  new_edges={0, 0, orth=0}
+edge[22]=[31.000000,43.000000]  [44.000000,43.000000]   mid=[37.500000,43.000000]       len=13.000000   mark=0  next=0  new_edges={0, 0, orth=0}
+edge[23]=[12.000000,43.000000]  [31.000000,43.000000]   mid=[21.500000,43.000000]       len=19.000000   mark=0  next=0  new_edges={0, 0, orth=0}
+edge[24]=[12.000000,43.000000]  [0.000000,31.000000]    mid=[6.000000,37.000000]        len=16.970562   mark=1  next=17 new_edges={0, 0, orth=0}
+edge[25]=[0.000000,31.000000]   [0.000000,43.000000]    mid=[0.000000,37.000000]        len=12.000001   mark=0  next=0  new_edges={0, 0, orth=0}
+edge[26]=[0.000000,43.000000]   [12.000000,43.000000]   mid=[6.000000,43.000000]        len=12.000001   mark=0  next=0  new_edges={0, 0, orth=0}
+edge[27]=[44.000000,12.000000]  [44.000000,0.000000]    mid=[44.000000,6.000000]        len=12.000001   mark=0  next=0  new_edges={0, 0, orth=0}
+edge[28]=[25.000000,0.000000]   [0.000000,0.000000]     mid=[12.500000,0.000000]        len=25.000000   mark=1  next=0  new_edges={0, 0, orth=0}
+edge[29]=[29.000000,10.500000]  [44.000000,12.000000]   mid=[0.000000,0.000000] len=43.000000   mark=0  next=276987904  new_edges={1099569654, 120, orth=0}
+edge[30]=[14.000000,9.000000]   [29.000000,10.500000]   mid=[0.000000,0.000000] len=44.000000   mark=0  next=275644416  new_edges={1102758667, 0, orth=0}
+edge[31]=[23.500000,18.000000]  [33.000000,27.000000]   mid=[25.000000,0.000000]        len=0.000000    mark=0  next=276987904  new_edges={1098972930, 0, orth=0}
+edge[32]=[14.000000,9.000000]   [23.500000,18.000000]   mid=[14.000000,9.000000]        len=0.000000    mark=0  next=276824064  new_edges={1100925861, 0, orth=0}
+edge[33]=[33.000000,27.000000]  [29.000000,10.500000]   mid=[25.000000,0.000000]        len=0.000000    mark=0  next=277020672  new_edges={1097859073, 0, orth=0}
+edge[34]=[7.500000,22.000000]   [15.000000,26.000000]   mid=[44.000000,12.000000]       len=0.000000    mark=0  next=277184512  new_edges={1095761920, 0, orth=0}
+edge[35]=[0.000000,18.000000]   [7.500000,22.000000]    mid=[44.000000,12.000000]       len=0.000000    mark=0  next=277053440  new_edges={1100480512, 0, orth=0}
+edge[36]=[14.500000,17.500000]  [14.000000,9.000000]    mid=[0.000000,18.000000]        len=0.000000    mark=0  next=277610496  new_edges={1099416502, 0, orth=0}
+edge[37]=[15.000000,26.000000]  [14.500000,17.500000]   mid=[14.000000,9.000000]        len=0.000000    mark=0  next=277053440  new_edges={1094713345, 0, orth=0}
+edge[38]=[23.500000,18.000000]  [14.500000,17.500000]   mid=[14.000000,9.000000]        len=34.500000   mark=0  next=277184512  new_edges={1094713345, 0, orth=0}
+edge[39]=[15.000000,26.000000]  [23.500000,18.000000]   mid=[33.000000,27.000000]       len=0.000000    mark=0  next=277544960  new_edges={1094713345, 0, orth=0}
+edge[40]=[0.000000,31.000000]   [7.500000,22.000000]    mid=[44.000000,12.000000]       len=7.000000    mark=0  next=275447808  new_edges={168, 0, orth=0}
+Triangles:
+triangle[0]=28 2 3 longest=28   counter=0 rev_counter=0 counter_scan=0 counter_scan_rev=0
+triangle[1]=-5 -3 30 longest=5  counter=1 rev_counter=0 counter_scan=1 counter_scan_rev=0
+triangle[2]=1 4 27 longest=4    counter=0 rev_counter=0 counter_scan=1 counter_scan_rev=0
+triangle[3]=6 7 -2 longest=6    counter=0 rev_counter=0 counter_scan=1 counter_scan_rev=0
+triangle[4]=-33 10 -29 longest=5        counter=1 rev_counter=1 counter_scan=2 counter_scan_rev=1
+triangle[5]=8 36 -7 longest=8   counter=2 rev_counter=0 counter_scan=4 counter_scan_rev=1
+triangle[6]=-39 13 -31 longest=9        counter=0 rev_counter=2 counter_scan=4 counter_scan_rev=3
+triangle[7]=12 11 -10 longest=10        counter=0 rev_counter=0 counter_scan=4 counter_scan_rev=3
+triangle[8]=-40 16 -34 longest=14       counter=0 rev_counter=1 counter_scan=4 counter_scan_rev=4
+triangle[9]=-24 17 -16 longest=17       counter=0 rev_counter=0 counter_scan=4 counter_scan_rev=4
+triangle[10]=23 18 -17 longest=18       counter=0 rev_counter=0 counter_scan=4 counter_scan_rev=4
+triangle[11]=19 -13 -18 longest=18      counter=0 rev_counter=0 counter_scan=4 counter_scan_rev=4
+triangle[12]=-19 20 -12 longest=20      counter=0 rev_counter=0 counter_scan=4 counter_scan_rev=4
+triangle[13]=-20 22 21 longest=20       counter=0 rev_counter=0 counter_scan=4 counter_scan_rev=4
+triangle[14]=25 26 24 longest=24        counter=0 rev_counter=0 counter_scan=4 counter_scan_rev=4
+triangle[15]=5 29 -4 longest=0  counter=0 rev_counter=0 counter_scan=0 counter_scan_rev=0
+triangle[16]=9 31 33 longest=0  counter=0 rev_counter=0 counter_scan=0 counter_scan_rev=0
+triangle[17]=-9 -30 32 longest=0        counter=0 rev_counter=0 counter_scan=0 counter_scan_rev=0
+triangle[18]=14 34 37 longest=0 counter=0 rev_counter=0 counter_scan=0 counter_scan_rev=0
+triangle[19]=-14 -8 35 longest=0        counter=0 rev_counter=0 counter_scan=0 counter_scan_rev=0
+triangle[20]=38 -37 39 longest=0        counter=0 rev_counter=0 counter_scan=0 counter_scan_rev=0
+triangle[21]=-38 -32 -36 longest=0      counter=0 rev_counter=0 counter_scan=0 counter_scan_rev=0
+triangle[22]=40 -35 15 longest=0        counter=0 rev_counter=0 counter_scan=0 counter_scan_rev=0
