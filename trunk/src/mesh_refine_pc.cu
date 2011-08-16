@@ -142,7 +142,7 @@ void refine_pass3(void)
 		// START
 		if (marked_count == 1) {
 	/*Scenario #1*/	if (LONGEST > 0) {	// forward scenario
-				printf("scenario 1\n");
+				dprintf("scenario 1\n");
 				// left side
 				tri_edge0[tid] = -LONGEST_SELF;
 				tri_edge1[tid] = LEFT_SELF;
@@ -152,7 +152,7 @@ void refine_pass3(void)
 				tri_edge1[created_tri_ix] = LONGEST_1;
 				tri_edge2[created_tri_ix] = RIGHT_SELF;
 	/*Scenario #2*/	} else {	// backward scenario
-				printf("scenario 2\n");
+				dprintf("scenario 2\n");
 				// left side
 				tri_edge0[tid] = -LONGEST_ORTHO;
 				tri_edge1[tid] = LEFT_SELF;
@@ -172,7 +172,7 @@ void refine_pass3(void)
 					tri_edge2[tid] = LONGEST_0;
 					// split the right side
 	/* Scenario #7 */		if (RIGHT > 0) {	// forward scenario
-						printf("scenario 7\n");
+						dprintf("scenario 7\n");
 						// left side
 						tri_edge0[created_tri_ix] = -RIGHT_SELF;
 						tri_edge1[created_tri_ix] = LONGEST_1;
@@ -184,7 +184,7 @@ void refine_pass3(void)
 						tri_edge2[created_tri_ix] = LONGEST_SELF;
 						created_tri_ix--;
 	/* Scenario #9 */		} else {	// backward scenario
-						printf("scenario 9\n");
+						dprintf("scenario 9\n");
 						// left side
 						tri_edge0[created_tri_ix] = -RIGHT_ORTHO;
 						tri_edge1[created_tri_ix] = LONGEST_1;
@@ -203,7 +203,7 @@ void refine_pass3(void)
 					tri_edge2[tid] = -LONGEST_1;
 					// split the right side
 	/* Scenario #8 */		if (RIGHT > 0) {	// forward scenario
-						printf("scenario 8\n");
+						dprintf("scenario 8\n");
 						// left side
 						tri_edge0[created_tri_ix] = -RIGHT_SELF;
 						tri_edge1[created_tri_ix] = -LONGEST_0;
@@ -215,7 +215,7 @@ void refine_pass3(void)
 						tri_edge2[created_tri_ix] = LONGEST_ORTHO;
 						created_tri_ix--;
 	/* Scenario #10 */		} else {	// backward scenario
-						printf("scenario 10\n");
+						dprintf("scenario 10\n");
 						// left side
 						tri_edge0[created_tri_ix] = -RIGHT_ORTHO;
 						tri_edge1[created_tri_ix] = -LONGEST_0;
@@ -236,7 +236,7 @@ void refine_pass3(void)
 					tri_edge2[tid] = RIGHT_SELF;
 					// split the left side
 	/* Scenario #3 */		if (LEFT > 0) {	// forward scenario
-						printf("scenario 3\n");
+						dprintf("scenario 3\n");
 						// left side
 						tri_edge0[created_tri_ix] = -LEFT_SELF;
 						tri_edge1[created_tri_ix] = -LONGEST_SELF;
@@ -248,7 +248,7 @@ void refine_pass3(void)
 						tri_edge2[created_tri_ix] = LONGEST_0;
 						created_tri_ix--;
 	/* Scenario #5 */		} else {	// backward scenario
-						printf("scenario 5\n");
+						dprintf("scenario 5\n");
 						// left side
 						tri_edge0[created_tri_ix] = -LEFT_ORTHO;
 						tri_edge1[created_tri_ix] = -LONGEST_SELF;
@@ -267,7 +267,7 @@ void refine_pass3(void)
 					tri_edge2[tid] = RIGHT_SELF;
 					// split the left side
 	/* Scenario #4 */		if (LEFT > 0) {	// forward scenario
-						printf("scenario 4\n");
+						dprintf("scenario 4\n");
 						// left side
 						tri_edge0[created_tri_ix] = -LEFT_SELF;
 						tri_edge1[created_tri_ix] = -LONGEST_ORTHO;
@@ -279,7 +279,7 @@ void refine_pass3(void)
 						tri_edge2[created_tri_ix] = -LONGEST_1;
 						created_tri_ix--;
 	/* Scenario #6 */		} else {	// backward scenario
-						printf("scenario 6\n");
+						dprintf("scenario 6\n");
 						// left side
 						tri_edge0[created_tri_ix] = -LEFT_ORTHO;
 						tri_edge1[created_tri_ix] = -LONGEST_ORTHO;
@@ -297,7 +297,7 @@ void refine_pass3(void)
 			if (LONGEST > 0) {	// longest forward scenario
 				if (LEFT > 0) {	// left forward scenario
 	/* Scenario #11 */		if (RIGHT > 0) {	// right forward scenario
-						printf("scenario 11\n");
+						dprintf("scenario 11\n");
 						// first, set the self triangle to part 1
 						tri_edge0[tid] = -LONGEST_SELF;
 						tri_edge1[tid] = LEFT_0;
@@ -318,7 +318,7 @@ void refine_pass3(void)
 						tri_edge2[created_tri_ix] = RIGHT_1;
 						created_tri_ix--;
 	/* Scenario #12 */		} else {	// right backward scenario
-						printf("scenario 12\n");
+						dprintf("scenario 12\n");
 						// first, set the self triangle to part 1
 						tri_edge0[tid] = -LONGEST_SELF;
 						tri_edge1[tid] = LEFT_0;
@@ -341,7 +341,7 @@ void refine_pass3(void)
 					}
 				} else {	// left backward scenario
 	/* Scenario #14 */		if (RIGHT > 0) {	// right forward scenario
-						printf("scenario 14\n");
+						dprintf("scenario 14\n");
 						// first, set the self triangle to part 1
 						tri_edge0[tid] = -LONGEST_SELF;
 						tri_edge1[tid] = -LEFT_1;
@@ -362,7 +362,7 @@ void refine_pass3(void)
 						tri_edge2[created_tri_ix] = RIGHT_1;
 						created_tri_ix--;
 	/* Scenario #13 */		} else {	// right backward scenario
-						printf("scenario 13\n");
+						dprintf("scenario 13\n");
 						// first, set the self triangle to part 1
 						tri_edge0[tid] = -LONGEST_SELF;
 						tri_edge1[tid] = -LEFT_1;
@@ -387,7 +387,7 @@ void refine_pass3(void)
 			} else {	// longest backward scenario
 				if (LEFT > 0) {	// left forward scenario
 	/* Scenario #15 */		if (RIGHT > 0) {	// right forward scenario
-						printf("scenario 15\n");
+						dprintf("scenario 15\n");
 						// first, set the self triangle to part 1
 						tri_edge0[tid] = -LONGEST_ORTHO;
 						tri_edge1[tid] = LEFT_0;
@@ -408,7 +408,7 @@ void refine_pass3(void)
 						tri_edge2[created_tri_ix] = RIGHT_1;
 						created_tri_ix--;
 	/* Scenario #16 */		} else {	// right backward scenario
-						printf("scenario 16\n");
+						dprintf("scenario 16\n");
 						// first, set the self triangle to part 1
 						tri_edge0[tid] = -LONGEST_ORTHO;
 						tri_edge1[tid] = LEFT_0;
@@ -431,7 +431,7 @@ void refine_pass3(void)
 					}
 				} else {	// left backward scenario
 	/* Scenario #18 */		if (RIGHT > 0) {	// right forward scenario
-						printf("scenario 18\n");
+						dprintf("scenario 18\n");
 						// first, set the self triangle to part 1
 						tri_edge0[tid] = -LONGEST_ORTHO;
 						tri_edge1[tid] = -LEFT_1;
@@ -452,7 +452,7 @@ void refine_pass3(void)
 						tri_edge2[created_tri_ix] = RIGHT_1;
 						created_tri_ix--;
 	/* Scenario #17 */		} else {	// right backward scenario
-						printf("scenario 17\n");
+						dprintf("scenario 17\n");
 						// first, set the self triangle to part 1
 						tri_edge0[tid] = -LONGEST_ORTHO;
 						tri_edge1[tid] = -LEFT_1;
