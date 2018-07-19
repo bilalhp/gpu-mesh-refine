@@ -3,7 +3,6 @@ CUDPP_DIR = ../cudpp/cudpp_src_1.1.1/
 CUDA_INSTALL_PATH ?= /usr/local/cuda
 
 # choose the correct library for your system (32 bit or 64 bit)
-
 LIB_PATHS = -L${CUDA_INSTALL_PATH}/lib -L${CUDPP_DIR}/lib -lcudpp_i686 -lcutil
 #LIB_PATHS = -L${CUDA_INSTALL_PATH}/lib64 -L${CUDPP_DIR}/lib -lcudpp_x86_64 -lcutil
 
